@@ -1,3 +1,120 @@
-body{
-    background-color: aquamarine;
+header.site-header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.main-header {
+    padding: 21px 40px;
+    top: 0;
+    z-index: 999;
+    position: relative;
+    width: 100%;
+}
+
+.hdr-right svg {
+    width: 40px;
+    height: 40px;
+    margin-right: 7px;
+}
+
+.hdr-right .site-search svg {
+    width: 20px;
+}
+
+.hdr-right .screen-reader {
+    color: #8D8D8D;
+}
+
+a.site-logo img {
+    width: 135px;
+}
+
+.main-navigation {
+    margin-left: auto;
+}
+
+.hdr-btn {
+    margin-left: 70px;
+}
+
+.hdr-btn .site-btn {
+    display: block;
+}
+
+.site-nav {
+    position: relative;
+    z-index: 9;
+}
+
+.site-nav ul {
+    margin: 0;
+}
+
+.site-nav>ul>li {
+    display: inline-block;
+    position: relative;
+    margin-right: 7px;
+    margin: 0;
+}
+
+.site-nav>ul>li>a:hover {
+    color: #F04405;
+}
+
+.site-nav>ul>li>a {
+    color: #000;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 5px 0;
+    display: inline-block;
+    position: relative;
+    margin-right: 56px;
+}
+
+.site-nav>ul>li:last-child>a {
+    margin: 0;
+}
+
+.site-nav>ul>li>a::before {
+    position: absolute;
+    background: #F04405;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    content: '';
+    transition: all 0.4s;
+    left: 0%;
+}
+
+.site-nav>ul>li>a:hover::before {
+    width: 100%;
+}
+
+.site-nav ul li:hover ul {
+    top: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+
+.site-nav ul li ul {
+    position: absolute;
+    left: 0%;
+    top: 120%;
+    width: 360px;
+    background: #fff;
+    z-index: 999;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    opacity: 0;
+    transition: all 0.4s;
+    visibility: hidden;
+}
+
+.site-nav ul li ul li a {
+    display: block;
+    font-size: 20px;
+    padding: 21px 28px;
+    font-weight: 500;
+    color: #121212;
 }
