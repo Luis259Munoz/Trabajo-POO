@@ -1,120 +1,97 @@
-header.site-header {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-}
-
-.main-header {
-    padding: 21px 40px;
-    top: 0;
-    z-index: 999;
-    position: relative;
-    width: 100%;
-}
-
-.hdr-right svg {
-    width: 40px;
-    height: 40px;
-    margin-right: 7px;
-}
-
-.hdr-right .site-search svg {
-    width: 20px;
-}
-
-.hdr-right .screen-reader {
-    color: #8D8D8D;
-}
-
-a.site-logo img {
-    width: 135px;
-}
-
-.main-navigation {
-    margin-left: auto;
-}
-
-.hdr-btn {
-    margin-left: 70px;
-}
-
-.hdr-btn .site-btn {
-    display: block;
-}
-
-.site-nav {
-    position: relative;
-    z-index: 9;
-}
-
-.site-nav ul {
+*{
+    padding: 0;
     margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
 }
+body{
+    background-color: #181b1b;
+}
+/*-----------Seccion del Nadvar---------------------*/
+nav{
 
-.site-nav>ul>li {
+    height: 70px;
+    width: 100%;
+}
+.logo-enlace{
+    position: absolute;
+    padding: 10px;
+}
+.logo{
+    height: 50px;
+}
+nav ul{
+    float: right;
+    margin-right: 10px;
+}
+nav ul li{
     display: inline-block;
-    position: relative;
-    margin-right: 7px;
-    margin: 0;
+    line-height: 70px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 13px;
+    border-radius: 3px;
+    text-transform:uppercase;
+}
+li a.activar, li a:hover{
+    background: #2e2e30;
+    transition: .7s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
 }
 
-.site-nav>ul>li>a:hover {
-    color: #F04405;
+
+@media (max-width: 952px){
+    .logo-enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
 }
 
-.site-nav>ul>li>a {
-    color: #000;
-    font-size: 17px;
-    font-weight: 500;
-    padding: 5px 0;
-    display: inline-block;
-    position: relative;
-    margin-right: 56px;
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #181b1b;
+        top: 70px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a.activar{
+        background: #2e2e30;
+        color: #fff;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
 }
-
-.site-nav>ul>li:last-child>a {
-    margin: 0;
-}
-
-.site-nav>ul>li>a::before {
-    position: absolute;
-    background: #F04405;
-    bottom: 0;
-    width: 0%;
-    height: 2px;
-    content: '';
-    transition: all 0.4s;
-    left: 0%;
-}
-
-.site-nav>ul>li>a:hover::before {
-    width: 100%;
-}
-
-.site-nav ul li:hover ul {
-    top: 100%;
-    opacity: 1;
-    visibility: visible;
-}
-
-.site-nav ul li ul {
-    position: absolute;
-    left: 0%;
-    top: 120%;
-    width: 360px;
-    background: #fff;
-    z-index: 999;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-    opacity: 0;
-    transition: all 0.4s;
-    visibility: hidden;
-}
-
-.site-nav ul li ul li a {
-    display: block;
-    font-size: 20px;
-    padding: 21px 28px;
-    font-weight: 500;
-    color: #121212;
-}
+/*------------------Fin de la seccion Nadvar------------------*/
