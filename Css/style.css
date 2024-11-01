@@ -1,74 +1,94 @@
-*{
+
+* {
     padding: 0;
     margin: 0;
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
+    color: floralwhite;
 }
-body{
+
+body {
     background-color: #181b1b;
 }
-/*-----------Seccion del Nadvar---------------------*/
-nav{
 
+nav {
     height: 70px;
     width: 100%;
+    z-index: 100;
+    position: fixed;
+    background-color: #181b1b;
 }
-.logo-enlace{
+
+.logo-enlace {
     position: absolute;
     padding: 10px;
 }
-.logo{
+
+.logo {
     height: 50px;
 }
-nav ul{
+
+nav ul {
     float: right;
     margin-right: 10px;
 }
-nav ul li{
+
+nav ul li {
     display: inline-block;
     line-height: 70px;
     margin: 0 5px;
 }
-nav ul li a{
-    color: #fff;
+
+nav ul li a {
     font-size: 18px;
     padding: 10px 13px;
     border-radius: 3px;
-    text-transform:uppercase;
+    text-transform: uppercase;
 }
-li a.activar, li a:hover{
+
+li a.activar,
+li a:hover {
     background: #2e2e30;
-    transition: .7s;
+    transition: 0.7s;
 }
-.checkbtn{
+
+.checkbtn {
     font-size: 30px;
-    color: #fff;
     float: right;
     line-height: 80px;
     margin-right: 40px;
     cursor: pointer;
     display: none;
+    z-index: 100; 
+    position: relative;
+    transition: 0.7s;
 }
-#check{
-    display: none;
+
+#check {
+    display:none;
 }
 
 
-@media (max-width: 952px){
-    .logo-enlace{
+@media (max-width: 952px) {
+    .logo-enlace {
         padding-left: 20px;
+        transition: 0.7s;
     }
-    nav ul li a{
+
+    nav ul li a {
         font-size: 16px;
+        transition: 0.7s;
     }
 }
 
-@media (max-width: 858px){
-    .checkbtn{
+@media (max-width: 858px) {
+    .checkbtn {
         display: block;
+        transition: all 0.7s;
     }
-    ul{
+
+    ul {
         position: fixed;
         width: 100%;
         height: 100vh;
@@ -77,21 +97,69 @@ li a.activar, li a:hover{
         left: -100%;
         text-align: center;
         transition: all .5s;
+        z-index: 99;
     }
-    nav ul li{
+
+    nav ul li {
+        
         display: block;
         margin: 50px 0;
         line-height: 30px;
     }
-    nav ul li a{
+
+    nav ul li a {
         font-size: 20px;
     }
-    li a:hover, li a.activar{
-        background: #2e2e30;
-        color: #fff;
+
+    li a:hover,
+    li a.activar {
+        background: rgb(46, 46, 48);
+
     }
-    #check:checked ~ ul{
-        left:0;
+
+    #check:checked~ul {
+        left: 0;
     }
 }
-/*------------------Fin de la seccion Nadvar------------------*/
+
+
+/*CSS PARA EL CONTENIDO*/
+.contenedor1 {
+    position: relative;
+    width: 100%;
+    height: 650px;
+    background-image: linear-gradient(to right, rgb(23, 23, 24), rgba(46, 46, 48, 0)), url("../Imagenes/imagen1.jpg");
+    background-size: cover;
+    background-position:center;
+    overflow: hidden;
+}
+
+.texto1 {
+    position: absolute;
+    bottom: 20%;
+    left: 50px;
+    font-size: 45px;
+    z-index: 1;
+    width: 50%;
+    height: 50%;
+    justify-content: center;
+}
+
+.img1 {
+    width: auto;
+    -webkit-mask-image: -gradient(black, transparent);
+    mask-image: linear-gradient(black, transparent);
+}
+
+@media  (max-width: 858px) {
+    .texto1 {
+        font-size: 40px;
+        transition: 0.7s;
+    }
+}
+@media (max-width: 720px) {
+    .texto1 {
+        font-size: 30px;
+        transition: 0.7s;
+    }   
+}
