@@ -8,9 +8,8 @@
 }
 
 body {
-    background-image: linear-gradient(to right, rgba(23, 23, 24, 0.801), rgba(46, 46, 48, 0)), url("../Imgs/fondo.jpg");
-    ;
-    /* Imagen de fondo */
+    background-image: linear-gradient(to right, rgba(23, 23, 24, 0.801), rgba(46, 46, 48, 0)), 
+    url("../Imgs/fondo.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -22,8 +21,7 @@ body {
 nav {
     height: 70px;
     width: 100%;
-    z-index: 100;
-    position: fixed;
+
     background-color: #201f1f73;
 }
 
@@ -358,7 +356,10 @@ li a:hover {
     }
 }
 
+/* ------------Seccion Crear Usuario-----------------*/
+
 .form-container {
+    
     display: flex;
     gap: 20px;
     padding: 20px;
@@ -367,9 +368,8 @@ li a:hover {
     margin: auto;
 }
 
-.crear-usuario,
-.login {
-    background-color: #161616;
+.crear-usuario, .login {
+    background-color: #161616; 
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(255, 253, 253, 0.445);
@@ -386,7 +386,6 @@ label {
 }
 
 input[type="text"],
-input[type="tel"],
 input[type="email"],
 input[type="password"] {
     width: 100%;

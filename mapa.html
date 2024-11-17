@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Stay & Go </title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <link rel="stylesheet" href="Css/styleMap.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a href="#" class="logo-enlace">
+            <img src="Imgs/logo.png" alt="" class="logo">
+        </a>
+        <ul>
+            <li><a href="index.html">Volver al Inicio</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="mapa">
+            <div id="map"></div>
+            <div class="datos">
+                <h2>Ingresa los Datos de tu Destino</h2>
+                <div class="RgsDireccion">
+                    <div class="lineas">
+                        <button id="locate">Obtener Ubicación Actual</button>
+                    </div>
+                    <div class="lineas">
+                        <span>Ingresa tu destino:</span>
+                        <input type="text" id="destination" placeholder="Destino (ciudad o municipio)" />
+                        <button id="search">Buscar Destino</button>
+                    </div>
+                    <div class="lineas">
+                        <button id="route">Iniciar Ruta</button>
+                        <button id="cancel-route">Cancelar Ruta</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-Contenedor">
+            <div class="footer-Info">
+                <h2>Stay & Go</h2><br>
+                <p>Donde las historias se encuentran <br>y los destinos se hacen hogar</p>
+            </div>
+            <div class="footer-Servicios">
+                <h2>Servicios</h2> <br>
+                <li><a href="#inicio">Inicio</a></li><br>
+                <li><a href="#despegar">Despegar Viaje</a></li><br>
+                <li><a href="#ofrecer">Ofrecer Servicios</a></li><br>
+                <li><a href="#nosotros">Nosotros</a></li>        
+            </div>
+            <div class="footer-Contactos">
+                <h2>Contactos</h2><br>
+                <li><a href="https://maps.app.goo.gl/wUofoGHpg27QeCdbA" target="_blank"><i class="fa-solid fa-location-dot" >
+
+                  </i> Cra 5 #540, Popayán, Colombia</a></li><br>
+                <li><i class="fa-solid fa-phone"></i> +57 309 213 3234</li><br>
+                <li><i class="fa-solid fa-envelope"></i> Stay&Go@gmail.com</li>
+            </div>
+            <div class="footer-Follows">
+                <h2>Siguenos en:</h2><br>
+                <li><i class="fa-brands fa-facebook"></i> Facebook</li><br>
+                <li><i class="fa-brands fa-instagram"></i> Instagram</li><br>
+                <li><i class="fa-brands fa-twitter"></i> Twiter</li>
+            </div>
+        </div>
+        <p class="Copyright">Copyright &copy;Stay&Go Compani. Todos los derechos reservados.</p>
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
