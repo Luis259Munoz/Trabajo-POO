@@ -1,220 +1,337 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Stay & Go </title>
-    <link rel="stylesheet" href="Css/style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>Stay & Go </title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
 </head>
+
 <body>
-    <nav>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-            <i class="fas fa-bars"></i>
-        </label>
-        <a href="#" class="logo-enlace">
-            <img src="Imgs/logo.png" alt="" class="logo">
-        </a>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="#despegar">Despegar Viaje</a></li>
-            <li><a href="#ofrecer">Ofrecer Servicios</a></li>
-            <li><a href="#nosotros">Nosotros</a></li>
-        </ul>
-    </nav>
-    <main>
-        <div class="contenedor1" id="inicio">
-            <div class="texto1">
-                <h1 class="titulo">Stay & Go</h1>
-                <p class="parrafos">Donde las historias se encuentran y los destinos se hacen hogar</p>
-            </div>
-        </div>
-        <div>
-            <div class="main-Despegar" id="despegar">
-                <div class="contenedor-Despegar">
-                    <h1 class="titulos">Despegar Viaje</h1>
-                    <div class="cont-2Despegar">
-                        <div class="cont-HijoDespegar">
-                            <h2>¿Cómo funciona?</h2><br>
-                            <p class="parrafos">Con Stay & Go, puedes crear tus propios destinos y lugares de viaje. Simplemente
-                                ingresa tu ubicación actual y luego elige el destino que deseas visitar. <br><br> Nosotros
-                                te ayudamos a encontrar el lugar perfecto para visitar, a medida que avanzas en tu
-                                viaje te indicaremos las mejores opciones de turismo, restaurantes, y otros
-                                atractivos que podrían ser de tu interés.</p>
-                        </div>
-                        <div class="cont-HijoDespegar">
-                            <div class="cont-hijo2">
-                                <img src="Imgs/Running map.gif" alt="mapa" width="250" height="250" style="border-radius: 5%;">
-                                <a href="mapa.html" >
-                                  <button>Ir a la ruta</button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <div class="video-background">
+    <video autoplay muted loop>
+      <source src="./Imgs/3129671-uhd_3840_2160_30fps.mp4" type="video/mp4">
+      Tu navegador no soporta videos.
+    </video>
+  </div>
+
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <a href="#" class="logo-enlace">
+      <img src="Imgs/logo.png" alt="" class="logo">
+    </a>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="#despegar">Despegar Viaje</a></li>
+      <li><a href="#ofrecer">Ofrecer Servicios</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="contenedor1" id="inicio">
+      <div class="texto1">
+        <h1 class="titulo">Stay & Go</h1>
+        <p class="parrafos">Donde las historias se encuentran y los destinos se hacen hogar</p>
+      </div>
+    </div>
+
+    <div>
+      <div class="main-Despegar" id="despegar">
+        <div class="contenedor-Despegar">
+          <h1 class="titulos">Tu Compañero Perfecto para Planificar Viajes</h1>
+          <div class="cont-2Despegar">
             <div>
-              <div class="main-Despegar" id="ofrecer">
-                <div class="contenedor-Despegar">
-                    <h1 class="titulos">Ofrecer Servicios</h1>
-                    <div class="cont-2Despegar">
-                        <div class="cont-HijoDespegar">
-                            <div class="cont-hijo2">
-                                <img src="Imgs/Services.gif" alt="mapa" width="250" height="250" style="border-radius: 5%;">
-                            </div>
-                        </div>
-                        <div class="cont-HijoDespegar">
-                            <h2>¿Deseas ofrecer tu servicio con Stay & Go?</h2><br>
-                            <p class="parrafos">Para comenzar nuestra aventura juntos, crea una cuenta en nuestro sitio web. 
-                              Una vez que hayas completado tu registro con éxito, inicia sesión para acceder a
-                              una sección en la que deberás proporcionar los datos necesarios sobre el lugar. <br><br>
-                              Finalmente, los datos serán validados para su publicación en nuestra plataforma.</p>
-                        </div>
-                    </div>
-                </div>
+              <p class="parrafos">¡Descubre la mejor manera de planificar tu viaje! Nuestra plataforma te permite
+                trazar rutas fácilmente mientras exploras hospedajes y lugares turísticos recomendados cerca de
+                tu trayecto. Solo ingresa tu ubicación y destino final, y te mostraremos una ruta detallada con
+                puntos de interés clave. Además, si tienes un negocio turístico o de hospedaje, regístralo para
+                que sea visible para los viajeros. Todo esto sin complicaciones: no necesitas iniciar sesión
+                para explorar rutas, y ofrecemos información clara y accesible para hacer de tu experiencia
+                algo único y memorable. ¡Comienza tu aventura ahora! 🚀</p>
             </div>
-            <div class="main-Despegar">
-              <div class="crear-usuario">
-                  <h2>Crear Usuario</h2>
-                  <form>
-                      <label for="firstName">Nombres:</label>
-                      <input type="text" id="firstName" name="firstName" required>
-          
-                      <label for="lastName">Apellidos:</label>
-                      <input type="text" id="lastName" name="lastName" required>
-          
-                      <label for="email">Correo:</label>
-                      <input type="email" id="email" name="email" required>
-          
-                      <label for="password">Contraseña:</label>
-                      <input type="password" id="password" name="password" required>
-          
-                      <button type="submit">Crear Usuario</button>
-                  </form>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="main-Despegar" id="ofrecer">
+          <div class="contenedor-Despegar">
+            <h1 class="titulos">Ofrecer Servicios</h1>
+            <div class="cont-2Despegar">
+              <div class="cont-HijoDespegar">
+                <div class="cont-hijo2">
+                  <img src="Imgs/Services.gif" alt="mapa" width="250" height="250" style="border-radius: 5%;">
                 </div>
-              
-              <div class="login">
-                  <h2>Iniciar Sesión</h2>
-                  <form>
-                      <label for="loginEmail">Correo:</label>
-                      <input type="email" id="loginEmail" name="loginEmail" required>
-          
-                      <label for="loginPassword">Contraseña:</label>
-                      <input type="password" id="loginPassword" name="loginPassword" required>
-          
-                      <button type="submit">Iniciar Sesión</button>
-                  </form>
+              </div>
+              <div class="cont-HijoDespegar">
+                <h2>¿Deseas ofrecer tu servicio con Stay & Go?</h2><br>
+                <p class="parrafos">Para comenzar nuestra aventura juntos, crea una cuenta en nuestro sitio web.
+                  Una vez que hayas completado tu registro con éxito, inicia sesión para acceder a
+                  una sección en la que deberás proporcionar los datos necesarios sobre el lugar. <br><br>
+                  Finalmente, los datos serán validados para su publicación en nuestra plataforma.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="cnt-CrearUser">
+          <div>
+            <h1 style="text-align: center;">Crea un Usuario e Inicia secion para crear y subir tu servico</h1>
+          </div>
+          <div class="main-User">
+            <div class="crear-usuario">
+              <h2>Crear Usuario</h2>
+              <form id="createUserForm">
+                <label for="firstName">Nombres:</label>
+                <input type="text" id="firstName" name="nombre" required>
+
+                <label for="lastName">Apellidos:</label>
+                <input type="text" id="lastName" name="apellido" required>
+
+                <label for="email">Correo:</label>
+                <input type="email" id="email" name="correo" required>
+
+                <label for="password">Contraseña:</label>
+                <div class="password-container">
+                  <input type="password" id="password" name="contraseña" required>
+                  <button type="button" onclick="mostrarServicios('password')">👁</button>
+                </div>
+
+                <button type="submit">Crear Usuario</button>
+              </form>
+            </div>
+
+            <div class="login">
+              <h2>Iniciar Sesión</h2>
+              <form id="loginForm">
+                <label for="loginEmail">Correo:</label>
+                <input type="email" id="loginEmail" name="loginEmail" required>
+
+                <label for="loginPassword">Contraseña:</label>
+                <div class="password-container">
+                  <input type="password" id="loginPassword" name="loginPassword" required>
+                  <button type="button" onclick="mostrarServicios('loginPassword')">👁</button>
+                </div>
+
+                <button type="submit">Iniciar Sesión</button>
+              </form>
+            </div>
+          </div>
+          <div class="service-section hidden" id="serviceSection">
+            <h2>Gestión de Servicios</h2>
+            <button id="createServiceBtn">Crear Servicio</button>
+            <button id="viewServicesBtn">Ver tus Servicios</button>
+
+            <div id="createServiceForm" class="hidden">
+              <h3>Crear Servicio</h3>
+              <form id="serviceForm">
+                <label for="serviceName">Nombre del Servicio:</label>
+                <input type="text" id="serviceName" name="serviceName" required>
+
+                <label for="serviceLocation">Ubicación:</label>
+                <input type="text" id="serviceLocation" name="serviceLocation" required>
+                
+                <label for="serviceContact">Contacto:</label>
+                <input type="text" id="serviceContact" name="serviceContact" required>
+
+                <label for="serviceType">Tipo:</label>
+                <input type="text" id="serviceType" name="serviceType" required>
+
+                <label for="serviceDescription">Descripción:</label>
+                <textarea style="height: 100%; width: 100%;" id="serviceDescription" name="serviceDescription" required></textarea>x
+
+                <button type="submit">Crear Servicio</button>
+              </form>
+            </div>
+
+            <div id="editServiceForm" class="hidden">
+              <h3>Editar Servicio</h3>
+              <form id="editForm">
+                <label for="editServiceName">Nombre del Servicio:</label>
+                <input type="text" id="editServiceName" name="editServiceName" required>
+
+                <label for="editServiceLocation">Ubicación:</label>
+                <input type="text" id="editServiceLocation" name="editServiceLocation" required>
+
+                <label for="editServiceContact">Contacto:</label>
+                <input type="text" id="editServiceContact" name="editServiceContact" required>
+
+                <label for="editServiceType">Tipo:</label>
+                <input type="text" id="editServiceType" name="editServiceType" required>
+
+                <label for="editServiceDescription">Descripción:</label>
+                <textarea id="editServiceDescription" name="editServiceDescription" required></textarea>
+
+                <button type="submit">Guardar Cambios</button>
+              </form>
+            </div>
+
+            <div id="servicesList" class="hidden">
+              <h3>Tus Servicios</h3>
+              <ul id="servicesUl" style="color: bisque;"></ul>
+            </div>
+          </div>
+        </div>
+        <div class="main-Despegar" id="despegar">
+          <div class="contenedor-Despegar">
+            <h1 class="titulos">Despegar Viaje</h1>
+            <div class="cont-2Despegar">
+              <div class="cont-HijoDespegar">
+                <h2>¿Cómo funciona?</h2><br>
+                <p class="parrafos">Con Stay & Go, puedes crear tus propios destinos y lugares de viaje. Simplemente
+                  ingresa tu ubicación actual y luego elige el destino que deseas visitar. <br><br> Nosotros
+                  te ayudamos a encontrar el lugar perfecto para visitar, a medida que avanzas en tu
+                  viaje te indicaremos las mejores opciones de turismo, restaurantes, y otros
+                  atractivos que podrían ser de tu interés.</p>
+              </div>
+              <div class="cont-HijoDespegar">
+                <div class="cont-hijo2">
+                  <img src="Imgs/Running map.gif" alt="mapa" width="250" height="250" style="border-radius: 5%;">
+
+                </div>
               </div>
             </div>
           </div>
-          
-            <div class="main-Nosotros" id="nosotros">
-
-                <div class="contenedor-Nosotros">
-                    <h1 class="titulos">Nuestro equipo</h1>
-                    <div class="contenedor-N2">
-                
-                      <div class="contenedorN-hijo">
-                        <div class="img-Nosotros">
-                          <img src="./Imgs/perfil.jpg" alt="Miembro del equipo 1">
-                          <div class="iconosN">
-                            <a href="" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                            <a href="" target="_blank"><i class="fab fa-twitter"></i></a>
-                            <a href="" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                          </div>
-                        </div>
-                        <p class="nombre-N">Tulio Martinez</p>
-                        <p class="rol">Arquitecto</p>
-                      </div>
-                
-                      <div class="contenedorN-hijo">
-                        <div class="img-Nosotros">
-                          <img src="./Imgs/perfil.jpg" alt="Miembro del equipo 2">
-                          <div class="iconosN">
-                            <a href="" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                            <a href="" target="_blank"><i class="fab fa-twitter"></i></a>
-                            <a href="" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                          </div>
-                        </div>
-                        <p class="nombre-N">Jean Ceron</p>
-                        <p class="rol">Teaster</p>
-                      </div>
-                
-                      <div class="contenedorN-hijo">
-                        <div class="img-Nosotros">
-                          <img src="./Imgs/perfil.jpg" alt="Miembro del equipo 3">
-                          <div class="iconosN">
-                            <a href="" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                            <a href="" target="_blank"><i class="fab fa-twitter"></i></a>
-                            <a href="" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                          </div>
-                        </div>
-                        <p class="nombre-N">Luis Muñoz</p>
-                        <p class="rol">Programador</p>
-                      </div>
-                
-                      <div class="contenedorN-hijo">
-                        <div class="img-Nosotros">
-                          <img src="./Imgs/perfil.jpg" alt="Miembro del equipo 4">
-                          <div class="iconosN">
-                            <a href="" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                            <a href="" target="_blank"><i class="fab fa-twitter"></i></a>
-                            <a href="" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                          </div>
-                        </div>
-                        <p class="nombre-N">Santiago Valverde</p>
-                        <p class="rol">Diseñador</p>
-                      </div>
-                
-                      <div class="contenedorN-hijo">
-                        <div class="img-Nosotros">
-                          <img src="./Imgs/perfil.jpg" alt="Miembro del equipo 5">
-                          <div class="iconosN">
-                            <a href="" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                            <a href="" target="_blank"><i class="fab fa-twitter"></i></a>
-                            <a href="" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                          </div>
-                        </div>
-                        <p class="nombre-N">Esteban Avirama</p>
-                        <p class="rol">Coodinador</p>
-                      </div>
-                
-                    </div>
-                  </div>                
-            </div>
         </div>
-    </main>
-    <footer>
-        <div class="footer-Contenedor">
-            <div class="footer-Info">
-                <h2>Stay & Go</h2><br>
-                <p>Donde las historias se encuentran <br>y los destinos se hacen hogar</p>
+        <div class="mapa">
+          <div id="map"></div>
+          <div class="datos">
+            <h2>Ingresa los Datos de tu Destino</h2>
+            <div class="RgsDireccion">
+              <div class="lineas">
+                <button id="locate">Obtener Ubicación Actual</button>
+              </div>
+              <div class="lineas">
+                <input type="text" id="destination" placeholder="Ingresa el destino (ciudad o municipio)" />
+                <button id="search">Buscar Destino</button>
+              </div>
+              <div class="lineas">
+                <button id="route">Iniciar Ruta</button>
+                <button id="cancel-route">Cancelar Ruta</button>
+              </div>
             </div>
-            <div class="footer-Servicios">
-                <h2>Servicios</h2> <br>
-                <li><a href="#inicio">Inicio</a></li><br>
-                <li><a href="#despegar">Despegar Viaje</a></li><br>
-                <li><a href="#ofrecer">Ofrecer Servicios</a></li><br>
-                <li><a href="#nosotros">Nosotros</a></li>        
-            </div>
-            <div class="footer-Contactos">
-                <h2>Contactos</h2><br>
-                <li><a href="https://maps.app.goo.gl/wUofoGHpg27QeCdbA" target="_blank"><i class="fa-solid fa-location-dot" >
-
-                  </i> Cra 5 #540, Popayán, Colombia</a></li><br>
-                <li><i class="fa-solid fa-phone"></i> +57 309 213 3234</li><br>
-                <li><i class="fa-solid fa-envelope"></i> Stay&Go@gmail.com</li>
-            </div>
-            <div class="footer-Follows">
-                <h2>Siguenos en:</h2><br>
-                <li><i class="fa-brands fa-facebook"></i> Facebook</li><br>
-                <li><i class="fa-brands fa-instagram"></i> Instagram</li><br>
-                <li><i class="fa-brands fa-twitter"></i> Twiter</li>
-            </div>
+          </div>
         </div>
-        <p class="Copyright">Copyright &copy;Stay&Go Compani. Todos los derechos reservados.</p>
-    </footer>
+        <div class="main-Nosotros" id="nosotros">
+
+          <div class="contenedor-Nosotros">
+            <h1 class="titulos">Nuestro equipo</h1>
+            <div class="contenedor-N2">
+
+              <div class="contenedorN-hijo">
+                <div class="img-Nosotros">
+                  <img src="./Imgs/perfil.jpg" alt="Miembro del equipo 1">
+                  <div class="iconosN">
+                    <a href="" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+                </div>
+                <p class="nombre-N">Tulio Martinez</p>
+                <p class="rol">Arquitecto</p>
+              </div>
+
+              <div class="contenedorN-hijo">
+                <div class="img-Nosotros">
+                  <img src="./Imgs/perfil.jpg" alt="Miembro del equipo 2">
+                  <div class="iconosN">
+                    <a href="" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+                </div>
+                <p class="nombre-N">Jean Ceron</p>
+                <p class="rol">Teaster</p>
+              </div>
+
+              <div class="contenedorN-hijo">
+                <div class="img-Nosotros">
+                  <img src="./Imgs/perfil.jpg" alt="Miembro del equipo 3">
+                  <div class="iconosN">
+                    <a href="" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+                </div>
+                <p class="nombre-N">Luis Muñoz</p>
+                <p class="rol">Programador</p>
+              </div>
+
+              <div class="contenedorN-hijo">
+                <div class="img-Nosotros">
+                  <img src="./Imgs/perfil.jpg" alt="Miembro del equipo 4">
+                  <div class="iconosN">
+                    <a href="" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+                </div>
+                <p class="nombre-N">Santiago Valverde</p>
+                <p class="rol">Diseñador</p>
+              </div>
+
+              <div class="contenedorN-hijo">
+                <div class="img-Nosotros">
+                  <img src="./Imgs/perfil.jpg" alt="Miembro del equipo 5">
+                  <div class="iconosN">
+                    <a href="" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+                </div>
+                <p class="nombre-N">Esteban Avirama</p>
+                <p class="rol">Coodinador</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+  </main>
+  <footer>
+    <div class="footer-Contenedor">
+      <div class="footer-Info">
+        <h2>Stay & Go</h2><br>
+        <p>Donde las historias se encuentran <br>y los destinos se hacen hogar</p>
+      </div>
+      <div class="footer-Servicios">
+        <h2>Servicios</h2> <br>
+        <li><a href="#inicio">Inicio</a></li><br>
+        <li><a href="#despegar">Despegar Viaje</a></li><br>
+        <li><a href="#ofrecer">Ofrecer Servicios</a></li><br>
+        <li><a href="#nosotros">Nosotros</a></li>
+      </div>
+      <div class="footer-Contactos">
+        <h2>Contactos</h2><br>
+        <li><a href="https://maps.app.goo.gl/wUofoGHpg27QeCdbA" target="_blank"><i class="fa-solid fa-location-dot">
+
+            </i> Cra 5 #540, Popayán, Colombia</a></li><br>
+        <li><i class="fa-solid fa-phone"></i> +57 309 213 3234</li><br>
+        <li><i class="fa-solid fa-envelope"></i> Stay&Go@gmail.com</li>
+      </div>
+      <div class="footer-Follows">
+        <h2>Siguenos en:</h2><br>
+        <li><i class="fa-brands fa-facebook"></i> Facebook</li><br>
+        <li><i class="fa-brands fa-instagram"></i> Instagram</li><br>
+        <li><i class="fa-brands fa-twitter"></i> Twiter</li>
+      </div>
+    </div>
+    <p class="Copyright">Copyright &copy;Stay&Go Compani. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="js/crearUser.js"></script>
+  <script src="js/mapa.js"></script>
+  
 </body>
 </html>

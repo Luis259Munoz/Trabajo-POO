@@ -1,28 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-    color: floralwhite;
+    font-family: "Signika Negative", sans-serif;
 }
 
-body {
-    background-image: linear-gradient(to right, rgba(23, 23, 24, 0.801), rgba(46, 46, 48, 0)), 
-    url("../Imgs/fondo.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+  }
+  
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-
 
 nav {
     height: 70px;
+    background: rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(10px);
+    position: fixed;
     width: 100%;
-
-    background-color: #201f1f73;
+    z-index: 1000;
 }
 
 .logo-enlace {
@@ -52,8 +61,7 @@ nav ul li a {
     text-transform: uppercase;
 }
 
-li a.activar,
-li a:hover {
+li a.activar, li a:hover {
     background: #2e2e30;
     transition: 0.7s;
 }
@@ -73,7 +81,6 @@ li a:hover {
 #check {
     display: none;
 }
-
 
 @media (max-width: 952px) {
     .logo-enlace {
@@ -116,8 +123,7 @@ li a:hover {
         font-size: 20px;
     }
 
-    li a:hover,
-    li a.activar {
+    li a:hover, li a.activar {
         background: rgb(46, 46, 48);
 
     }
@@ -127,6 +133,11 @@ li a:hover {
     }
 }
 
+h1, h2, h3, h4, h5, h6 {
+    color: thistle;
+}
+
+/*----------------Seccion Inicio -----------------*/
 .contenedor1 {
     position: relative;
     width: 100%;
@@ -167,24 +178,26 @@ li a:hover {
 
 /*--------------Despegar---------------*/
 .main-Despegar {
-    background-color: #1a1a1a;
+    background: rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(10px);
     display: flex;
     justify-content: center;
     align-items: start;
     height: auto;
-    width: 95%;
-    margin: 0px auto;
+    width: 85%;
+    margin: 30px auto;
     padding: 40px 20px;
+    border-radius: 20px ;
 }
 
-.parrafos {
+.parrafos, a {
     color: rgb(221, 221, 221);
 }
 
 .contenedor-Despegar {
     text-align: center;
     font-size: larger;
-    width: 90%;
+    width: 100%;
     padding: 20px;
 }
 
@@ -205,20 +218,189 @@ li a:hover {
     align-items: center;
 }
 
-.btn-map {
-    background-color: #0073e6;
+
+
+.mapa {
+    background: rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    height: auto;
+    width: 85%;
+    margin: 20px auto;
+    padding: 5px;
     color: white;
-    padding: 15px 25px;
-    border-radius: 15px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    margin: 10px;
+    border-radius: 20px;
 }
+#map { 
+    margin: 20px;
+    height: 500px; 
+    width: 70%;
+    border-radius: 10px;
+}
+
+/* ------------Seccion datos-----------------*/
+.datos{
+    height: 500px;
+    width: 35%;
+    margin: 20px 10px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.RgsDireccion {
+    text-align: center;
+    margin-top: 20px; 
+}
+
+.RgsDireccion .lineas {
+    display: flex;
+    justify-content: start; 
+    align-self: start;
+    margin-bottom: 15px; 
+}
+
+.RgsDireccion input {
+    padding: 5px;
+    width: 200px;
+    margin: 2px;
+}
+
+
+/* ------------Seccion Crear Usuario-----------------*/
+.cnt-CrearUser {
+    background: rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(10px);
+    margin: 20px auto;
+    width: 85%;
+    padding: 50px 20px;
+    border-radius: 10px;
+    
+}
+.cnt-CrearUser h2{
+    text-align: center;
+}
+.main-User{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 95%;
+    margin: 0px auto 20px;
+    padding: 40px 20px;
+  
+}
+.form-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: auto;
+}
+
+.crear-usuario, .login {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 253, 253, 0.445);
+    width: 50%;
+    max-width: 400px;
+    margin: 20px;
+    background: rgba(0, 0, 0, 0.329);
+    backdrop-filter: blur(10px);
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: rgb(221, 221, 221);
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: rgb(0, 0, 0);
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin:10px ;
+    background-color: #10304e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.password-container {
+    position: relative;
+    display: flex;
+    align-items:end;
+}
+
+.password-container input {
+    width: 100%;
+    padding-right: 10px;
+}
+
+.password-container button {
+    position: absolute;
+    color: #000000;
+    right: 2px;
+    background:none;
+    border: none;
+    cursor: pointer;
+    width: 10%;
+    height: auto;
+}
+
+.hidden {
+    display: none;
+  }
+
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-container input {
+    width: 100%;
+    padding-right: 30px;
+}
+
+.password-container button {
+    position: absolute;
+    right: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.service-section {
+    margin-top: 20px;
+    width: 50%;
+    margin: 1px auto;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 253, 253, 0.445);
+}
+
 
 /*--------------Nosotros---------------*/
 .main-Nosotros {
-    background-color: #1a1a1a;
+    background: rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(10px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -227,6 +409,7 @@ li a:hover {
     margin: 0px auto 20px;
     padding: 40px 20px;
     font-size: large;
+    border-radius: 20px;
 }
 
 .contenedor-Nosotros {
@@ -246,7 +429,7 @@ li a:hover {
 .contenedorN-hijo {
     width: 200px;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(250, 249, 249, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     text-align: center;
     transition: transform 0.7s ease;
@@ -297,10 +480,11 @@ li a:hover {
 .nombre-N {
     font-weight: bold;
     margin-top: 10px;
+    color: thistle;
 }
 
 .rol {
-    color: #555;
+    color: #b3b3b3;
     margin-bottom: 15px;
 }
 
@@ -324,7 +508,8 @@ li a:hover {
 
 /*------------Seccion footer-----------------*/
 .footer-Contenedor {
-    background-color: #161616;
+    background-color: #0f0f0f;
+    color: thistle;
     width: 100%;
     height: auto;
     padding: 20px;
@@ -335,7 +520,8 @@ li a:hover {
 .Copyright {
     padding: 10px;
     text-align: center;
-    background-color: #161616;
+    background-color: #0f0f0f;
+    color: thistle;
 }
 
 @media (max-width: 768px) {
@@ -354,60 +540,4 @@ li a:hover {
     .footer-Follows li {
         text-align: center;
     }
-}
-
-/* ------------Seccion Crear Usuario-----------------*/
-
-.form-container {
-    
-    display: flex;
-    gap: 20px;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 400px;
-    margin: auto;
-}
-
-.crear-usuario, .login {
-    background-color: #161616; 
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(255, 253, 253, 0.445);
-    width: 50%;
-    max-width: 400px;
-    margin: 20px;
-}
-
-
-label {
-    display: block;
-    margin-top: 10px;
-    color: rgb(221, 221, 221);
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    color: rgb(0, 0, 0);
-}
-
-button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 15px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-button:hover {
-    background-color: #555;
 }

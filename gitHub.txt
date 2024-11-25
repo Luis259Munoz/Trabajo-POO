@@ -1,0 +1,5 @@
+git add .
+git commit -m "n" //n es el mensaje de lo que se hizo en esta actualizacion
+git push origin main
+
+
